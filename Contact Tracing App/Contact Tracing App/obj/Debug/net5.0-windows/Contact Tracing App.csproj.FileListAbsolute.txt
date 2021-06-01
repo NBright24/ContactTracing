@@ -1,0 +1,18 @@
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\Contact Tracing App.exe
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\Contact Tracing App.deps.json
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\Contact Tracing App.runtimeconfig.json
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\Contact Tracing App.runtimeconfig.dev.json
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\Contact Tracing App.dll
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\ref\Contact Tracing App.dll
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\bin\Debug\net5.0-windows\Contact Tracing App.pdb
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.csproj.AssemblyReference.cache
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact_Tracing_App.ContactForm1.resources
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.csproj.GenerateResource.cache
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.AssemblyInfoInputs.cache
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.AssemblyInfo.cs
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.csproj.CoreCompileInputs.cache
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.dll
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\ref\Contact Tracing App.dll
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.pdb
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.genruntimeconfig.cache
