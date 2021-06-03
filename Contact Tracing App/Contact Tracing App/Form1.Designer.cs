@@ -54,8 +54,8 @@ namespace Contact_Tracing_App
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Neil = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Neil)).BeginInit();
             this.SuspendLayout();
             // 
             // Greeting
@@ -275,14 +275,14 @@ namespace Contact_Tracing_App
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // pictureBox1
+            // Neil
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 383);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 58);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.Neil.Image = ((System.Drawing.Image)(resources.GetObject("Neil.Image")));
+            this.Neil.Location = new System.Drawing.Point(12, 383);
+            this.Neil.Name = "Neil";
+            this.Neil.Size = new System.Drawing.Size(274, 58);
+            this.Neil.TabIndex = 22;
+            this.Neil.TabStop = false;
             // 
             // ContactForm1
             // 
@@ -291,7 +291,7 @@ namespace Contact_Tracing_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(718, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Neil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -318,7 +318,7 @@ namespace Contact_Tracing_App
             this.Name = "ContactForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing Form";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Neil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,7 +349,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Neil;
     }
 }
 
