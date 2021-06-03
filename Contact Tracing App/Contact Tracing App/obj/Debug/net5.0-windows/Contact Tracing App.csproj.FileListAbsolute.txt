@@ -16,3 +16,4 @@ D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\De
 D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\ref\Contact Tracing App.dll
 D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.pdb
 D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact Tracing App.genruntimeconfig.cache
+D:\My Files\GitHub\ContactTracing\Contact Tracing App\Contact Tracing App\obj\Debug\net5.0-windows\Contact_Tracing_App.Properties.Resources.resources

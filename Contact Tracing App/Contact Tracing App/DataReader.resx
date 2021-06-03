@@ -57,9 +57,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Neil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -206,5 +203,14 @@
         8ODB9eGIrJLXPvByYGBgYA0sMQSG14LYOmEFjb1fbHRmhzl/s3EaQWLKieWG058tPSaZgYGBgYGBgYGB
         gYGBgYGBgYGBgYGBgYGBKTjnnP8BED1OkCpmRC8AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="Greeting.Text" xml:space="preserve">
+    <value>ATTENTION! FOR AUTHORIZED PERSONNEL USE ONLY!
+
+THIS PROGRAM IS INTENDED ONLY FOR AUTHORIZED STAFF.
+UNAUTHORIZED ACCESS IS PUNISHABLE BY LAW.
+PLEASE HANDLE DATA WITH UTMOST SECURITY.
+PLEASE FOLLOW COMPANY PROTOCOL FOR HANDLING CUSTOMER DATA.
+SHOULD THERE BE ANY CONCERNS, REPORT IT TO THE MANAGEMENT.</value>
   </data>
 </root>
