@@ -54,22 +54,23 @@ namespace Contact_Tracing_App
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.AttentionLabel = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.Neil = new System.Windows.Forms.PictureBox();
+            this.YourCompanyLogo = new System.Windows.Forms.PictureBox();
             this.Symptoms = new System.Windows.Forms.Label();
             this.SymptomList = new System.Windows.Forms.CheckedListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Neil)).BeginInit();
+            this.ReaderButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.YourCompanyLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // Greeting
             // 
             this.Greeting.AutoSize = true;
             this.Greeting.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Greeting.Location = new System.Drawing.Point(128, 25);
+            this.Greeting.Location = new System.Drawing.Point(201, 9);
             this.Greeting.Name = "Greeting";
-            this.Greeting.Size = new System.Drawing.Size(409, 44);
+            this.Greeting.Size = new System.Drawing.Size(341, 66);
             this.Greeting.TabIndex = 0;
-            this.Greeting.Text = "Good day! We would like you to answer this form\r\nfor everyone\'s safety throughout" +
-    " these times.";
+            this.Greeting.Text = "In order to enter the store premises,\r\nplease answer this contact tracing form.\r\n" +
+    "Thank you for your cooperation.";
             this.Greeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HelpBTN
@@ -134,6 +135,7 @@ namespace Contact_Tracing_App
             this.LastNameBox.Size = new System.Drawing.Size(575, 29);
             this.LastNameBox.TabIndex = 6;
             this.LastNameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LastNameBox.TextChanged += new System.EventHandler(this.LastNameBox_TextChanged);
             // 
             // LabelTime
             // 
@@ -216,6 +218,7 @@ namespace Contact_Tracing_App
             this.AddressLineBox.Size = new System.Drawing.Size(575, 29);
             this.AddressLineBox.TabIndex = 14;
             this.AddressLineBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AddressLineBox.TextChanged += new System.EventHandler(this.AddressLineBox_TextChanged);
             // 
             // CityProvinceBox
             // 
@@ -226,6 +229,7 @@ namespace Contact_Tracing_App
             this.CityProvinceBox.Size = new System.Drawing.Size(575, 29);
             this.CityProvinceBox.TabIndex = 15;
             this.CityProvinceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CityProvinceBox.TextChanged += new System.EventHandler(this.CityProvinceBox_TextChanged);
             // 
             // BranchVisitBox
             // 
@@ -236,6 +240,7 @@ namespace Contact_Tracing_App
             this.BranchVisitBox.Size = new System.Drawing.Size(575, 29);
             this.BranchVisitBox.TabIndex = 16;
             this.BranchVisitBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BranchVisitBox.TextChanged += new System.EventHandler(this.BranchVisitBox_TextChanged);
             // 
             // PickDate
             // 
@@ -245,6 +250,7 @@ namespace Contact_Tracing_App
             this.PickDate.Size = new System.Drawing.Size(258, 29);
             this.PickDate.TabIndex = 17;
             this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
+            this.PickDate.ValueChanged += new System.EventHandler(this.PickDate_ValueChanged);
             // 
             // PickTime
             // 
@@ -255,6 +261,7 @@ namespace Contact_Tracing_App
             this.PickTime.Size = new System.Drawing.Size(158, 29);
             this.PickTime.TabIndex = 18;
             this.PickTime.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
+            this.PickTime.ValueChanged += new System.EventHandler(this.PickTime_ValueChanged);
             // 
             // NumberBox
             // 
@@ -265,6 +272,7 @@ namespace Contact_Tracing_App
             this.NumberBox.Size = new System.Drawing.Size(132, 29);
             this.NumberBox.TabIndex = 19;
             this.NumberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumberBox.TextChanged += new System.EventHandler(this.NumberBox_TextChanged);
             // 
             // EmailBox
             // 
@@ -275,6 +283,7 @@ namespace Contact_Tracing_App
             this.EmailBox.Size = new System.Drawing.Size(334, 29);
             this.EmailBox.TabIndex = 20;
             this.EmailBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EmailBox.TextChanged += new System.EventHandler(this.EmailBox_TextChanged);
             // 
             // AttentionLabel
             // 
@@ -287,7 +296,6 @@ namespace Contact_Tracing_App
             this.AttentionLabel.TabIndex = 21;
             this.AttentionLabel.Text = resources.GetString("AttentionLabel.Text");
             this.AttentionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AttentionLabel.Click += new System.EventHandler(this.AttentionLabel_Click);
             // 
             // imageList1
             // 
@@ -295,15 +303,15 @@ namespace Contact_Tracing_App
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // Neil
+            // YourCompanyLogo
             // 
-            this.Neil.Image = ((System.Drawing.Image)(resources.GetObject("Neil.Image")));
-            this.Neil.Location = new System.Drawing.Point(562, 9);
-            this.Neil.Name = "Neil";
-            this.Neil.Size = new System.Drawing.Size(141, 73);
-            this.Neil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Neil.TabIndex = 22;
-            this.Neil.TabStop = false;
+            this.YourCompanyLogo.Image = ((System.Drawing.Image)(resources.GetObject("YourCompanyLogo.Image")));
+            this.YourCompanyLogo.Location = new System.Drawing.Point(12, 9);
+            this.YourCompanyLogo.Name = "YourCompanyLogo";
+            this.YourCompanyLogo.Size = new System.Drawing.Size(141, 73);
+            this.YourCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.YourCompanyLogo.TabIndex = 22;
+            this.YourCompanyLogo.TabStop = false;
             // 
             // Symptoms
             // 
@@ -340,7 +348,18 @@ namespace Contact_Tracing_App
             this.SymptomList.Name = "SymptomList";
             this.SymptomList.Size = new System.Drawing.Size(285, 67);
             this.SymptomList.TabIndex = 24;
-            this.SymptomList.SelectedIndexChanged += new System.EventHandler(this.SymptomList_SelectedIndexChanged);
+            this.SymptomList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.SymptomList_ItemCheck);
+            // 
+            // ReaderButton
+            // 
+            this.ReaderButton.BackColor = System.Drawing.Color.GhostWhite;
+            this.ReaderButton.Font = new System.Drawing.Font("Bahnschrift", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ReaderButton.Location = new System.Drawing.Point(625, 25);
+            this.ReaderButton.Name = "ReaderButton";
+            this.ReaderButton.Size = new System.Drawing.Size(78, 42);
+            this.ReaderButton.TabIndex = 25;
+            this.ReaderButton.Text = "I\'M AN AUTHORIZED\r\nPERSONNEL";
+            this.ReaderButton.UseVisualStyleBackColor = false;
             // 
             // ContactForm1
             // 
@@ -349,9 +368,10 @@ namespace Contact_Tracing_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(718, 526);
+            this.Controls.Add(this.ReaderButton);
             this.Controls.Add(this.SymptomList);
             this.Controls.Add(this.Symptoms);
-            this.Controls.Add(this.Neil);
+            this.Controls.Add(this.YourCompanyLogo);
             this.Controls.Add(this.AttentionLabel);
             this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.NumberBox);
@@ -377,8 +397,8 @@ namespace Contact_Tracing_App
             this.MaximizeBox = false;
             this.Name = "ContactForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Contact Tracing Form";
-            ((System.ComponentModel.ISupportInitialize)(this.Neil)).EndInit();
+            this.Text = "YourCompany Pholippines Contact Tracing Form";
+            ((System.ComponentModel.ISupportInitialize)(this.YourCompanyLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,9 +429,10 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.Label AttentionLabel;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox Neil;
+        private System.Windows.Forms.PictureBox YourCompanyLogo;
         private System.Windows.Forms.Label Symptoms;
         private System.Windows.Forms.CheckedListBox SymptomList;
+        private System.Windows.Forms.Button ReaderButton;
     }
 }
 
