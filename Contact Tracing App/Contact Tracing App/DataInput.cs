@@ -30,7 +30,7 @@ namespace Contact_Tracing_App
         string address1;
         string address2;
         string StoreBranch;
-        byte InformationCount = 0;
+        byte InformationCount = 1;
 
         public void FirstNameBox_TextChanged(object sender, EventArgs e)
         {
@@ -84,7 +84,7 @@ namespace Contact_Tracing_App
 
         public void SubmitBTN_Click(object sender, EventArgs e)
         {
-            if(InformationCount == 10)
+            if(InformationCount >= 10)
             {
                 FirstName = FirstNameBox.Text;
                 LastName = LastNameBox.Text;
@@ -101,31 +101,42 @@ namespace Contact_Tracing_App
                 address2 = CityProvinceBox.Text;
                 StoreBranch = BranchVisitBox.Text;
 
+                //FILE Name
+                string filedate;
+                filedate = DateTime.Now.ToLongDateString();
+
                 StreamWriter DataAdd;
-                DataAdd = File.AppendText("OutputSample.txt");
+                DataAdd = File.AppendText(filedate + ".txt");
                 DataAdd.WriteLine("\n==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
-                DataAdd.Write(FirstName);
+                DataAdd.Write("Customer Name:\n" + FirstName);
                 DataAdd.WriteLine(LastName);
-                DataAdd.WriteLine(DateVisit);
-                DataAdd.WriteLine(TimeVisit);
-                DataAdd.WriteLine(ContactNo);
+                DataAdd.WriteLine("Date:\n" + DateVisit);
+                DataAdd.WriteLine("Time:\n" + TimeVisit);
+                DataAdd.WriteLine("Contact Details:\n" + ContactNo);
                 DataAdd.WriteLine(emailadd);
-                DataAdd.WriteLine(address1);
+                DataAdd.WriteLine("Address:\n" + address1);
                 DataAdd.WriteLine(address2);
-                DataAdd.WriteLine(StoreBranch);
+                DataAdd.WriteLine("BRANCH:\n" + StoreBranch);
                 DataAdd.Close();
 
-                MessageBox.Show("Form submitted.\nPlease follow the health protocol implemented within the store." +
-               "\nThank you for your cooperation and have a good day!");
+                MessageBox.Show("Please follow the health protocol implemented within the store." +
+               "\nThank you for your cooperation and have a good day!","Form Submitted");
 
                 FirstNameBox.Text = "";
                 LastNameBox.Text = "";
                 //PickDate.Value;
+                //a
+                NumberBox.Text = "";
+                EmailBox.Text = "";
+                AddressLineBox.Text = "";
+                CityProvinceBox.Text = "";
+                BranchVisitBox.Text = "";
             }
             else
             {
                 MessageBox.Show("You supplied an insufficient amount of information.\nPlease double check and try again." +
-                    "\nShould there be any concerns, please ask a YourCompany Staff near you.");
+                    "\nApproach our staff for any concerns.","INSUFFICIENT INFORMATION",MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
 
            
