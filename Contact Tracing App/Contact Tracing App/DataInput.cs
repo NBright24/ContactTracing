@@ -20,11 +20,8 @@ namespace Contact_Tracing_App
         //Variables
         string FirstName;
         string LastName;
-        //UNSURE
         string DateVisit;
-        //UNSURE
         string TimeVisit;
-        string symps;
         string ContactNo;
         string emailadd;
         string address1;
@@ -93,7 +90,7 @@ namespace Contact_Tracing_App
 
                 if (SymptomList.CheckedItems.Count != 0)
                 {
-                    for (int x = 0; x < SymptomList.CheckedItems.Count; x++)
+                    for (byte x = 0; x < SymptomList.CheckedItems.Count; x++)
                     {
                         conditon = conditon + "Customer Condition" + (x + 1).ToString() + " : " + SymptomList.CheckedItems[x].ToString() + "\n";
                     }
@@ -114,13 +111,14 @@ namespace Contact_Tracing_App
                 string filedate;
                 filedate = DateTime.Now.ToLongDateString();
 
+                //FILE WRITE
                 StreamWriter DataAdd;
                 DataAdd = File.AppendText(filedate + ".txt");
-                DataAdd.WriteLine("\n==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
-                DataAdd.Write("Customer Name:\n" + FirstName);
+                DataAdd.WriteLine("==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
+                DataAdd.WriteLine("\nCustomer Name:\n" + FirstName);
                 DataAdd.WriteLine(LastName);
-                DataAdd.WriteLine("\n" + conditon);
-                DataAdd.WriteLine("\nDate:\n" + DateVisit);
+                DataAdd.WriteLine("\nFOR SYMPTOMS" + conditon);
+                DataAdd.WriteLine("Date:\n" + DateVisit);
                 DataAdd.WriteLine("Time:\n" + TimeVisit);
                 DataAdd.WriteLine("Contact Details:\n" + ContactNo);
                 DataAdd.WriteLine(emailadd);
@@ -132,12 +130,14 @@ namespace Contact_Tracing_App
                 MessageBox.Show("Please follow the health protocol implemented by the store." +
                "\nThank you for your cooperation and have a good day!","Form Submitted", MessageBoxButtons.OK , MessageBoxIcon.Information);
 
+                //VALUE RESET
                 FirstNameBox.Text = "";
                 LastNameBox.Text = "";
                 this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
                 this.PickTime.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
                 SymptomList.Items.Clear();
 
+                //THE LIST IS REDONE
                 this.SymptomList.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 this.SymptomList.FormattingEnabled = true;
                 this.SymptomList.Items.AddRange(new object[] {
