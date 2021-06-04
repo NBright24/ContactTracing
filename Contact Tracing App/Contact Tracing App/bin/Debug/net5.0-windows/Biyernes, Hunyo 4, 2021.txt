@@ -74,3 +74,52 @@ Sample2
 BRANCH:
 Sample2
 
+==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========
+
+Customer Name:
+Lorem Ipsum
+Lorem Ipsum
+
+FOR SYMPTOMS
+Customer Condition1 : None, I'm good
+
+Date:
+Biyernes, Hunyo 4, 2021
+Time:
+8:00:00 AM
+
+Contact Details:
+Lorem Ipsum
+Lorem Ipsum
+
+Address:
+Lorem Ipsum
+Lorem Ipsum
+
+BRANCH:
+Lorem Ipsum
+
+==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========
+
+Customer Name:
+Lorem Ipsum
+Lorem Ipsum
+
+FOR SYMPTOMS
+
+Date:
+Biyernes, Hunyo 4, 2021
+Time:
+5:00:00 AM
+
+Contact Details:
+Lorem Ipsum
+Lorem Ipsum
+
+Address:
+Lorem Ipsum
+Lorem Ipsum
+
+BRANCH:
+Lorem Ipsum
+
