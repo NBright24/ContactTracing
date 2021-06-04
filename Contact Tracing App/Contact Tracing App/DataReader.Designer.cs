@@ -30,22 +30,15 @@ namespace Contact_Tracing_App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataReader));
-            this.Neil = new System.Windows.Forms.PictureBox();
             this.Greeting = new System.Windows.Forms.Label();
-            this.DONEBTN = new System.Windows.Forms.Button();
-            this.readerHelpBTN = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Neil)).BeginInit();
+            this.Exit = new System.Windows.Forms.Button();
+            this.FileLabel = new System.Windows.Forms.Label();
+            this.YourCompanyLogo = new System.Windows.Forms.PictureBox();
+            this.PickDateFile = new System.Windows.Forms.DateTimePicker();
+            this.SubmitBTN = new System.Windows.Forms.Button();
+            this.DisplayBox = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.YourCompanyLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Neil
-            // 
-            this.Neil.Image = ((System.Drawing.Image)(resources.GetObject("Neil.Image")));
-            this.Neil.Location = new System.Drawing.Point(578, 22);
-            this.Neil.Name = "Neil";
-            this.Neil.Size = new System.Drawing.Size(155, 80);
-            this.Neil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Neil.TabIndex = 23;
-            this.Neil.TabStop = false;
             // 
             // Greeting
             // 
@@ -58,27 +51,69 @@ namespace Contact_Tracing_App
             this.Greeting.Text = resources.GetString("Greeting.Text");
             this.Greeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DONEBTN
+            // Exit
             // 
-            this.DONEBTN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DONEBTN.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DONEBTN.Location = new System.Drawing.Point(12, 138);
-            this.DONEBTN.Name = "DONEBTN";
-            this.DONEBTN.Size = new System.Drawing.Size(92, 38);
-            this.DONEBTN.TabIndex = 25;
-            this.DONEBTN.Text = "DONE";
-            this.DONEBTN.UseVisualStyleBackColor = false;
+            this.Exit.BackColor = System.Drawing.Color.Red;
+            this.Exit.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Exit.Location = new System.Drawing.Point(658, 139);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(100, 49);
+            this.Exit.TabIndex = 25;
+            this.Exit.Text = "EXIT";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // readerHelpBTN
+            // FileLabel
             // 
-            this.readerHelpBTN.BackColor = System.Drawing.Color.FloralWhite;
-            this.readerHelpBTN.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.readerHelpBTN.Location = new System.Drawing.Point(110, 142);
-            this.readerHelpBTN.Name = "readerHelpBTN";
-            this.readerHelpBTN.Size = new System.Drawing.Size(54, 31);
-            this.readerHelpBTN.TabIndex = 26;
-            this.readerHelpBTN.Text = "Help";
-            this.readerHelpBTN.UseVisualStyleBackColor = false;
+            this.FileLabel.AutoSize = true;
+            this.FileLabel.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FileLabel.Location = new System.Drawing.Point(95, 154);
+            this.FileLabel.Name = "FileLabel";
+            this.FileLabel.Size = new System.Drawing.Size(143, 19);
+            this.FileLabel.TabIndex = 28;
+            this.FileLabel.Text = "Enter Date for File";
+            // 
+            // YourCompanyLogo
+            // 
+            this.YourCompanyLogo.Image = ((System.Drawing.Image)(resources.GetObject("YourCompanyLogo.Image")));
+            this.YourCompanyLogo.Location = new System.Drawing.Point(616, 24);
+            this.YourCompanyLogo.Name = "YourCompanyLogo";
+            this.YourCompanyLogo.Size = new System.Drawing.Size(172, 85);
+            this.YourCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.YourCompanyLogo.TabIndex = 29;
+            this.YourCompanyLogo.TabStop = false;
+            // 
+            // PickDateFile
+            // 
+            this.PickDateFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PickDateFile.Location = new System.Drawing.Point(244, 147);
+            this.PickDateFile.Name = "PickDateFile";
+            this.PickDateFile.Size = new System.Drawing.Size(258, 29);
+            this.PickDateFile.TabIndex = 30;
+            this.PickDateFile.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
+            this.PickDateFile.ValueChanged += new System.EventHandler(this.PickDateFile_ValueChanged);
+            // 
+            // SubmitBTN
+            // 
+            this.SubmitBTN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SubmitBTN.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SubmitBTN.Location = new System.Drawing.Point(560, 144);
+            this.SubmitBTN.Name = "SubmitBTN";
+            this.SubmitBTN.Size = new System.Drawing.Size(92, 38);
+            this.SubmitBTN.TabIndex = 31;
+            this.SubmitBTN.Text = "SUBMIT";
+            this.SubmitBTN.UseVisualStyleBackColor = false;
+            this.SubmitBTN.Click += new System.EventHandler(this.SubmitBTN_Click);
+            // 
+            // DisplayBox
+            // 
+            this.DisplayBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayBox.Location = new System.Drawing.Point(12, 194);
+            this.DisplayBox.Name = "DisplayBox";
+            this.DisplayBox.Size = new System.Drawing.Size(776, 381);
+            this.DisplayBox.TabIndex = 32;
+            this.DisplayBox.Text = "";
             // 
             // DataReader
             // 
@@ -86,25 +121,32 @@ namespace Contact_Tracing_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(800, 587);
-            this.Controls.Add(this.readerHelpBTN);
-            this.Controls.Add(this.DONEBTN);
+            this.ControlBox = false;
+            this.Controls.Add(this.DisplayBox);
+            this.Controls.Add(this.SubmitBTN);
+            this.Controls.Add(this.PickDateFile);
+            this.Controls.Add(this.YourCompanyLogo);
+            this.Controls.Add(this.FileLabel);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.Greeting);
-            this.Controls.Add(this.Neil);
             this.MaximizeBox = false;
             this.Name = "DataReader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(DATA READER) YourCompany Philippines Contact Tracing Form";
-            ((System.ComponentModel.ISupportInitialize)(this.Neil)).EndInit();
+            this.Load += new System.EventHandler(this.DataReader_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.YourCompanyLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox Neil;
         private System.Windows.Forms.Label Greeting;
-        private System.Windows.Forms.Button DONEBTN;
-        private System.Windows.Forms.Button readerHelpBTN;
+        public System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Label FileLabel;
+        private System.Windows.Forms.PictureBox YourCompanyLogo;
+        private System.Windows.Forms.DateTimePicker PickDateFile;
+        private System.Windows.Forms.Button SubmitBTN;
+        private System.Windows.Forms.RichTextBox DisplayBox;
     }
 }

@@ -1,0 +1,76 @@
+==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========
+
+Customer Name:
+Sample
+Sample
+
+FOR SYMPTOMS
+Customer Condition1 : None, I'm good
+
+Date:
+Huwebes, Hunyo 3, 2021
+Time:
+10:00:00 AM
+
+Contact Details:
+Sample
+Sample
+
+Address:
+Sample
+Sample
+
+BRANCH:
+Sample
+
+==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========
+
+Customer Name:
+Sample1
+Sample1
+
+FOR SYMPTOMS
+Customer Condition1 : Fever
+Customer Condition2 : Dry Cough
+
+Date:
+Huwebes, Hunyo 3, 2021
+Time:
+10:00:00 AM
+
+Contact Details:
+Sample1
+Sample1
+
+Address:
+Sample1
+Sample1
+
+BRANCH:
+Sample1
+
+==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========
+
+Customer Name:
+Sample2
+Sample2
+
+FOR SYMPTOMS
+Customer Condition1 : Fever
+
+Date:
+Biyernes, Hunyo 4, 2021
+Time:
+12:30:00 AM
+
+Contact Details:
+Sample2
+Sample2
+
+Address:
+Sample2
+Sample2
+
+BRANCH:
+Sample2
+
