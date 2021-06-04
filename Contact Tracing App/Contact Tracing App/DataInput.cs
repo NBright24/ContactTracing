@@ -89,8 +89,17 @@ namespace Contact_Tracing_App
                 FirstName = FirstNameBox.Text;
                 LastName = LastNameBox.Text;
 
-                //symps = SymptomList.CheckedItems.ToString;
+                string conditon = "";
 
+                if (SymptomList.CheckedItems.Count != 0)
+                {
+                    for (int x = 0; x < SymptomList.CheckedItems.Count; x++)
+                    {
+                        conditon = conditon + "Customer Condition" + (x + 1).ToString() + " : " + SymptomList.CheckedItems[x].ToString() + "\n";
+                    }
+                }
+
+               
                 DateVisit = PickDate.Text;
                 TimeVisit = PickTime.Text;
 
@@ -110,31 +119,59 @@ namespace Contact_Tracing_App
                 DataAdd.WriteLine("\n==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
                 DataAdd.Write("Customer Name:\n" + FirstName);
                 DataAdd.WriteLine(LastName);
-                DataAdd.WriteLine("Date:\n" + DateVisit);
+                DataAdd.WriteLine("\n" + conditon);
+                DataAdd.WriteLine("\nDate:\n" + DateVisit);
                 DataAdd.WriteLine("Time:\n" + TimeVisit);
                 DataAdd.WriteLine("Contact Details:\n" + ContactNo);
                 DataAdd.WriteLine(emailadd);
-                DataAdd.WriteLine("Address:\n" + address1);
+                DataAdd.WriteLine("\nAddress:\n" + address1);
                 DataAdd.WriteLine(address2);
-                DataAdd.WriteLine("BRANCH:\n" + StoreBranch);
+                DataAdd.WriteLine("\nBRANCH:\n" + StoreBranch);
                 DataAdd.Close();
 
-                MessageBox.Show("Please follow the health protocol implemented within the store." +
-               "\nThank you for your cooperation and have a good day!","Form Submitted");
+                MessageBox.Show("Please follow the health protocol implemented by the store." +
+               "\nThank you for your cooperation and have a good day!","Form Submitted", MessageBoxButtons.OK , MessageBoxIcon.Information);
 
                 FirstNameBox.Text = "";
                 LastNameBox.Text = "";
-                //PickDate.Value;
-                //a
+                this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
+                this.PickTime.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
+                SymptomList.Items.Clear();
+
+                this.SymptomList.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                this.SymptomList.FormattingEnabled = true;
+                this.SymptomList.Items.AddRange(new object[] {
+            "None, I\'m good",
+            "Fever",
+            "Dry Cough",
+            "Tiredness",
+            "Aches and Pains",
+            "Sore Throat",
+            "Diarrhoea",
+            "Conjuctivities",
+            "Headache",
+            "Loss of smell or taste",
+            "Skin rash",
+            "Difficulty in Breathing",
+            "Chest Pain",
+            "Loss of Speech"});
+                this.SymptomList.Location = new System.Drawing.Point(418, 209);
+                this.SymptomList.Name = "SymptomList";
+                this.SymptomList.Size = new System.Drawing.Size(285, 67);
+                this.SymptomList.TabIndex = 24;
+                this.SymptomList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.SymptomList_ItemCheck);
+
                 NumberBox.Text = "";
                 EmailBox.Text = "";
                 AddressLineBox.Text = "";
                 CityProvinceBox.Text = "";
                 BranchVisitBox.Text = "";
+
+                InformationCount = 1;
             }
             else
             {
-                MessageBox.Show("You supplied an insufficient amount of information.\nPlease double check and try again." +
+                MessageBox.Show("You supplied an insufficient amount of information.\nPlease double check then try again." +
                     "\nApproach our staff for any concerns.","INSUFFICIENT INFORMATION",MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
