@@ -280,7 +280,7 @@ namespace Contact_Tracing_App
             this.EmailBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EmailBox.Location = new System.Drawing.Point(369, 299);
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.PlaceholderText = "YourMail@YourProvider.com";
+            this.EmailBox.PlaceholderText = "YourMail@YourProvider.com (optional)";
             this.EmailBox.Size = new System.Drawing.Size(334, 29);
             this.EmailBox.TabIndex = 20;
             this.EmailBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -361,6 +361,7 @@ namespace Contact_Tracing_App
             this.ReaderButton.TabIndex = 25;
             this.ReaderButton.Text = "I\'M AN AUTHORIZED\r\nPERSONNEL";
             this.ReaderButton.UseVisualStyleBackColor = false;
+            this.ReaderButton.Click += new System.EventHandler(this.ReaderButton_Click);
             // 
             // ContactForm1
             // 

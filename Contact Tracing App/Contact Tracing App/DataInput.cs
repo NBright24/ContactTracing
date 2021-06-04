@@ -117,14 +117,15 @@ namespace Contact_Tracing_App
                 DataAdd.WriteLine("==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
                 DataAdd.WriteLine("\nCustomer Name:\n" + FirstName);
                 DataAdd.WriteLine(LastName);
-                DataAdd.WriteLine("\nFOR SYMPTOMS" + conditon);
+                DataAdd.WriteLine("\nFOR SYMPTOMS\n" + conditon);
                 DataAdd.WriteLine("Date:\n" + DateVisit);
                 DataAdd.WriteLine("Time:\n" + TimeVisit);
-                DataAdd.WriteLine("Contact Details:\n" + ContactNo);
+                DataAdd.WriteLine("\nContact Details:\n" + ContactNo);
                 DataAdd.WriteLine(emailadd);
                 DataAdd.WriteLine("\nAddress:\n" + address1);
                 DataAdd.WriteLine(address2);
                 DataAdd.WriteLine("\nBRANCH:\n" + StoreBranch);
+                DataAdd.WriteLine("");
                 DataAdd.Close();
 
                 MessageBox.Show("Please follow the health protocol implemented by the store." +
@@ -191,6 +192,23 @@ namespace Contact_Tracing_App
                 0,
                 "https://bit.ly/3x0CGWV",
                 "Privacy Policy");
+        }
+
+        private void ReaderButton_Click(object sender, EventArgs e)
+        {
+
+            if(MessageBox.Show("YOU ARE ABOUT TO ACCESS A CONFIDENTIAL FEATURE" +
+                "\nPLEASE CONFIRM THAT YOU'RE AN AUTHORIZED PERSONNEL" +
+                "\nUNAUTHORIZED ACTIONS ARE PUNISHABLE BY LAW", "WARNING", MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                var ReaderForm = new DataReader();
+                ReaderForm.Show();
+
+                this.Visible = false;
+            }
+           
+            
         }
     }
 }

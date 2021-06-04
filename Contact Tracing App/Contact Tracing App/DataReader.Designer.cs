@@ -92,7 +92,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.Neil);
             this.MaximizeBox = false;
             this.Name = "DataReader";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(DATA READER) YourCompany Philippines Contact Tracing Form";
             ((System.ComponentModel.ISupportInitialize)(this.Neil)).EndInit();
             this.ResumeLayout(false);
