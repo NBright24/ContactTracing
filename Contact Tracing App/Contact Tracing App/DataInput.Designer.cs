@@ -70,7 +70,7 @@ namespace Contact_Tracing_App
             this.Greeting.Size = new System.Drawing.Size(341, 66);
             this.Greeting.TabIndex = 0;
             this.Greeting.Text = "In order to enter the store premises,\r\nplease answer this contact tracing form.\r\n" +
-    "Thank you for your cooperation.";
+    "We are expecting your cooperation.";
             this.Greeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HelpBTN
@@ -82,6 +82,7 @@ namespace Contact_Tracing_App
             this.HelpBTN.TabIndex = 1;
             this.HelpBTN.Text = "Help";
             this.HelpBTN.UseVisualStyleBackColor = true;
+            this.HelpBTN.Click += new System.EventHandler(this.HelpBTN_Click);
             // 
             // SubmitBTN
             // 
@@ -397,7 +398,7 @@ namespace Contact_Tracing_App
             this.MaximizeBox = false;
             this.Name = "ContactForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "YourCompany Pholippines Contact Tracing Form";
+            this.Text = "YourCompany Philippines Contact Tracing Form";
             ((System.ComponentModel.ISupportInitialize)(this.YourCompanyLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
