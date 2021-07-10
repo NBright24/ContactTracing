@@ -128,7 +128,7 @@ namespace Contact_Tracing_App
                 //FILE WRITE
                 StreamWriter DataAdd;
                 DataAdd = File.AppendText(filedate + ".txt");
-                DataAdd.WriteLine("==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
+                DataAdd.WriteLine("===== CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY! =====");
                 DataAdd.WriteLine("\nCustomer Name:\n" + FirstName);
                 DataAdd.WriteLine(LastName);
                 DataAdd.WriteLine("\nAge & Sex:\n" + Age + " " + Gender);
