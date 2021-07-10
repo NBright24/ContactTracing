@@ -374,6 +374,7 @@ namespace Contact_Tracing_App
             this.GenderBox.Size = new System.Drawing.Size(78, 29);
             this.GenderBox.TabIndex = 26;
             this.GenderBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GenderBox.TextChanged += new System.EventHandler(this.GenderBox_TextChanged);
             // 
             // AgeBox
             // 
@@ -384,6 +385,7 @@ namespace Contact_Tracing_App
             this.AgeBox.Size = new System.Drawing.Size(78, 29);
             this.AgeBox.TabIndex = 27;
             this.AgeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AgeBox.TextChanged += new System.EventHandler(this.AgeBox_TextChanged);
             // 
             // ContactForm1
             // 

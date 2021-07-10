@@ -41,6 +41,16 @@ namespace Contact_Tracing_App
             InformationCount++;
         }
 
+        private void GenderBox_TextChanged(object sender, EventArgs e)
+        {
+            InformationCount++;
+        }
+
+        private void AgeBox_TextChanged(object sender, EventArgs e)
+        {
+            InformationCount++;
+        }
+
         public void PickDate_ValueChanged(object sender, EventArgs e)
         {
             InformationCount++;
@@ -83,7 +93,7 @@ namespace Contact_Tracing_App
 
         public void SubmitBTN_Click(object sender, EventArgs e)
         {
-            if(InformationCount >= 10)
+            if ((InformationCount >= 12) || (GenderBox.Text.Contains("m")) || (GenderBox.Text.Contains("f")) )
             {
                 FirstName = FirstNameBox.Text;
                 LastName = LastNameBox.Text;
@@ -179,7 +189,7 @@ namespace Contact_Tracing_App
             }
             else
             {
-                MessageBox.Show("You supplied an insufficient amount of information.\nPlease double check then try again." +
+                MessageBox.Show("You supplied either an insufficient amount of information or incorrect information.\nPlease double check then try again." +
                     "\nApproach our staff for any concerns.","INSUFFICIENT INFORMATION",MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
