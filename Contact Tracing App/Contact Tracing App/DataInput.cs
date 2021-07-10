@@ -20,6 +20,8 @@ namespace Contact_Tracing_App
         //Variables
         string FirstName;
         string LastName;
+        string Age;
+        string Gender;
         string DateVisit;
         string TimeVisit;
         string ContactNo;

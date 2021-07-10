@@ -58,6 +58,8 @@ namespace Contact_Tracing_App
             this.Symptoms = new System.Windows.Forms.Label();
             this.SymptomList = new System.Windows.Forms.CheckedListBox();
             this.ReaderButton = new System.Windows.Forms.Button();
+            this.GenderBox = new System.Windows.Forms.TextBox();
+            this.AgeBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.YourCompanyLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,18 +67,18 @@ namespace Contact_Tracing_App
             // 
             this.Greeting.AutoSize = true;
             this.Greeting.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Greeting.Location = new System.Drawing.Point(201, 9);
+            this.Greeting.Location = new System.Drawing.Point(219, 9);
             this.Greeting.Name = "Greeting";
-            this.Greeting.Size = new System.Drawing.Size(341, 66);
+            this.Greeting.Size = new System.Drawing.Size(393, 66);
             this.Greeting.TabIndex = 0;
             this.Greeting.Text = "In order to enter the store premises,\r\nplease answer this contact tracing form.\r\n" +
-    "We are expecting your cooperation.";
+    "We are expecting your cooperation. Thank you!\r\n";
             this.Greeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HelpBTN
             // 
             this.HelpBTN.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HelpBTN.Location = new System.Drawing.Point(632, 483);
+            this.HelpBTN.Location = new System.Drawing.Point(722, 27);
             this.HelpBTN.Name = "HelpBTN";
             this.HelpBTN.Size = new System.Drawing.Size(54, 31);
             this.HelpBTN.TabIndex = 1;
@@ -88,7 +90,7 @@ namespace Contact_Tracing_App
             // 
             this.SubmitBTN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SubmitBTN.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SubmitBTN.Location = new System.Drawing.Point(611, 439);
+            this.SubmitBTN.Location = new System.Drawing.Point(695, 458);
             this.SubmitBTN.Name = "SubmitBTN";
             this.SubmitBTN.Size = new System.Drawing.Size(92, 38);
             this.SubmitBTN.TabIndex = 2;
@@ -142,7 +144,7 @@ namespace Contact_Tracing_App
             // 
             this.LabelTime.AutoSize = true;
             this.LabelTime.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelTime.Location = new System.Drawing.Point(16, 164);
+            this.LabelTime.Location = new System.Drawing.Point(16, 171);
             this.LabelTime.Name = "LabelTime";
             this.LabelTime.Size = new System.Drawing.Size(96, 19);
             this.LabelTime.TabIndex = 7;
@@ -152,7 +154,7 @@ namespace Contact_Tracing_App
             // 
             this.LabelDate.AutoSize = true;
             this.LabelDate.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelDate.Location = new System.Drawing.Point(334, 164);
+            this.LabelDate.Location = new System.Drawing.Point(391, 171);
             this.LabelDate.Name = "LabelDate";
             this.LabelDate.Size = new System.Drawing.Size(95, 19);
             this.LabelDate.TabIndex = 8;
@@ -216,7 +218,7 @@ namespace Contact_Tracing_App
             this.AddressLineBox.Location = new System.Drawing.Point(128, 334);
             this.AddressLineBox.Name = "AddressLineBox";
             this.AddressLineBox.PlaceholderText = "Your House Number, Street, Subdivision, and Barangay";
-            this.AddressLineBox.Size = new System.Drawing.Size(575, 29);
+            this.AddressLineBox.Size = new System.Drawing.Size(659, 29);
             this.AddressLineBox.TabIndex = 14;
             this.AddressLineBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AddressLineBox.TextChanged += new System.EventHandler(this.AddressLineBox_TextChanged);
@@ -227,7 +229,7 @@ namespace Contact_Tracing_App
             this.CityProvinceBox.Location = new System.Drawing.Point(128, 369);
             this.CityProvinceBox.Name = "CityProvinceBox";
             this.CityProvinceBox.PlaceholderText = "Your Municipality, City, Province, and ZIP Code";
-            this.CityProvinceBox.Size = new System.Drawing.Size(575, 29);
+            this.CityProvinceBox.Size = new System.Drawing.Size(659, 29);
             this.CityProvinceBox.TabIndex = 15;
             this.CityProvinceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CityProvinceBox.TextChanged += new System.EventHandler(this.CityProvinceBox_TextChanged);
@@ -238,7 +240,7 @@ namespace Contact_Tracing_App
             this.BranchVisitBox.Location = new System.Drawing.Point(128, 404);
             this.BranchVisitBox.Name = "BranchVisitBox";
             this.BranchVisitBox.PlaceholderText = "Example: MyCompany Store Mall of Asia 1, please ask staff for exact details.";
-            this.BranchVisitBox.Size = new System.Drawing.Size(575, 29);
+            this.BranchVisitBox.Size = new System.Drawing.Size(659, 29);
             this.BranchVisitBox.TabIndex = 16;
             this.BranchVisitBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BranchVisitBox.TextChanged += new System.EventHandler(this.BranchVisitBox_TextChanged);
@@ -246,9 +248,9 @@ namespace Contact_Tracing_App
             // PickDate
             // 
             this.PickDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PickDate.Location = new System.Drawing.Point(445, 157);
+            this.PickDate.Location = new System.Drawing.Point(502, 164);
             this.PickDate.Name = "PickDate";
-            this.PickDate.Size = new System.Drawing.Size(258, 29);
+            this.PickDate.Size = new System.Drawing.Size(285, 29);
             this.PickDate.TabIndex = 17;
             this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
             this.PickDate.ValueChanged += new System.EventHandler(this.PickDate_ValueChanged);
@@ -257,7 +259,7 @@ namespace Contact_Tracing_App
             // 
             this.PickTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PickTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.PickTime.Location = new System.Drawing.Point(128, 157);
+            this.PickTime.Location = new System.Drawing.Point(128, 164);
             this.PickTime.Name = "PickTime";
             this.PickTime.Size = new System.Drawing.Size(158, 29);
             this.PickTime.TabIndex = 18;
@@ -270,7 +272,7 @@ namespace Contact_Tracing_App
             this.NumberBox.Location = new System.Drawing.Point(128, 299);
             this.NumberBox.Name = "NumberBox";
             this.NumberBox.PlaceholderText = "09XXXXXXXX";
-            this.NumberBox.Size = new System.Drawing.Size(132, 29);
+            this.NumberBox.Size = new System.Drawing.Size(158, 29);
             this.NumberBox.TabIndex = 19;
             this.NumberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumberBox.TextChanged += new System.EventHandler(this.NumberBox_TextChanged);
@@ -281,7 +283,7 @@ namespace Contact_Tracing_App
             this.EmailBox.Location = new System.Drawing.Point(369, 299);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.PlaceholderText = "YourMail@YourProvider.com (optional)";
-            this.EmailBox.Size = new System.Drawing.Size(334, 29);
+            this.EmailBox.Size = new System.Drawing.Size(418, 29);
             this.EmailBox.TabIndex = 20;
             this.EmailBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.EmailBox.TextChanged += new System.EventHandler(this.EmailBox_TextChanged);
@@ -291,7 +293,7 @@ namespace Contact_Tracing_App
             this.AttentionLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.AttentionLabel.AutoSize = true;
             this.AttentionLabel.Font = new System.Drawing.Font("Bahnschrift Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AttentionLabel.Location = new System.Drawing.Point(9, 444);
+            this.AttentionLabel.Location = new System.Drawing.Point(95, 444);
             this.AttentionLabel.Name = "AttentionLabel";
             this.AttentionLabel.Size = new System.Drawing.Size(594, 70);
             this.AttentionLabel.TabIndex = 21;
@@ -318,12 +320,12 @@ namespace Contact_Tracing_App
             // 
             this.Symptoms.AutoSize = true;
             this.Symptoms.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Symptoms.Location = new System.Drawing.Point(6, 210);
+            this.Symptoms.Location = new System.Drawing.Point(47, 210);
             this.Symptoms.Name = "Symptoms";
             this.Symptoms.Size = new System.Drawing.Size(406, 66);
             this.Symptoms.TabIndex = 23;
             this.Symptoms.Text = "Do you have any of the following symptoms\r\nin the last 14 days? Please check all " +
-    "that applies.\r\nScroll to see more items.";
+    "that applies.\r\n(Scroll to see more items.)";
             this.Symptoms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SymptomList
@@ -345,7 +347,7 @@ namespace Contact_Tracing_App
             "Difficulty in Breathing",
             "Chest Pain",
             "Loss of Speech"});
-            this.SymptomList.Location = new System.Drawing.Point(418, 209);
+            this.SymptomList.Location = new System.Drawing.Point(502, 209);
             this.SymptomList.Name = "SymptomList";
             this.SymptomList.Size = new System.Drawing.Size(285, 67);
             this.SymptomList.TabIndex = 24;
@@ -355,7 +357,7 @@ namespace Contact_Tracing_App
             // 
             this.ReaderButton.BackColor = System.Drawing.Color.GhostWhite;
             this.ReaderButton.Font = new System.Drawing.Font("Bahnschrift", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ReaderButton.Location = new System.Drawing.Point(625, 25);
+            this.ReaderButton.Location = new System.Drawing.Point(12, 460);
             this.ReaderButton.Name = "ReaderButton";
             this.ReaderButton.Size = new System.Drawing.Size(78, 42);
             this.ReaderButton.TabIndex = 25;
@@ -363,13 +365,35 @@ namespace Contact_Tracing_App
             this.ReaderButton.UseVisualStyleBackColor = false;
             this.ReaderButton.Click += new System.EventHandler(this.ReaderButton_Click);
             // 
+            // GenderBox
+            // 
+            this.GenderBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GenderBox.Location = new System.Drawing.Point(709, 88);
+            this.GenderBox.Name = "GenderBox";
+            this.GenderBox.PlaceholderText = "Sex";
+            this.GenderBox.Size = new System.Drawing.Size(78, 29);
+            this.GenderBox.TabIndex = 26;
+            this.GenderBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // AgeBox
+            // 
+            this.AgeBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AgeBox.Location = new System.Drawing.Point(709, 123);
+            this.AgeBox.Name = "AgeBox";
+            this.AgeBox.PlaceholderText = "Age";
+            this.AgeBox.Size = new System.Drawing.Size(78, 29);
+            this.AgeBox.TabIndex = 27;
+            this.AgeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ContactForm1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(718, 526);
+            this.ClientSize = new System.Drawing.Size(799, 526);
+            this.Controls.Add(this.AgeBox);
+            this.Controls.Add(this.GenderBox);
             this.Controls.Add(this.ReaderButton);
             this.Controls.Add(this.SymptomList);
             this.Controls.Add(this.Symptoms);
@@ -435,6 +459,8 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label Symptoms;
         private System.Windows.Forms.CheckedListBox SymptomList;
         private System.Windows.Forms.Button ReaderButton;
+        private System.Windows.Forms.TextBox GenderBox;
+        private System.Windows.Forms.TextBox AgeBox;
     }
 }
 
