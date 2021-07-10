@@ -93,72 +93,89 @@ namespace Contact_Tracing_App
 
         public void SubmitBTN_Click(object sender, EventArgs e)
         {
-            if ((InformationCount >= 12) || (GenderBox.Text.Contains("m")) || (GenderBox.Text.Contains("f")) )
-            {
-                FirstName = FirstNameBox.Text;
-                LastName = LastNameBox.Text;
-                Age = AgeBox.Text;
-                Gender = GenderBox.Text;
+            FileWrite();
+        }  
 
-                string conditon = "";
+        private void HelpBTN_Click(object sender, EventArgs e)
+        {
+            ShowHelp();
+        }
 
-                if (SymptomList.CheckedItems.Count != 0)
+        private void ReaderButton_Click(object sender, EventArgs e)
+        {
+            ReaderFormUp();
+        }
+
+        //=================== METHODS ===================//
+
+        private void FileWrite()
+        {
+                if ((InformationCount >= 12) || (GenderBox.Text.Contains("m")) || (GenderBox.Text.Contains("f")))
                 {
-                    for (byte x = 0; x < SymptomList.CheckedItems.Count; x++)
+                    FirstName = FirstNameBox.Text;
+                    LastName = LastNameBox.Text;
+                    Age = AgeBox.Text;
+                    Gender = GenderBox.Text;
+
+                    string conditon = "";
+
+                    if (SymptomList.CheckedItems.Count != 0)
                     {
-                        conditon = conditon + "Customer Condition" + (x + 1).ToString() + " : " + SymptomList.CheckedItems[x].ToString() + "\n";
+                        for (byte x = 0; x < SymptomList.CheckedItems.Count; x++)
+                        {
+                            conditon = conditon + "Customer Condition" + (x + 1).ToString() + " : " + SymptomList.CheckedItems[x].ToString() + "\n";
+                        }
                     }
-                }
 
-               
-                DateVisit = PickDate.Text;
-                TimeVisit = PickTime.Text;
 
-                ContactNo = NumberBox.Text;
-                emailadd = EmailBox.Text;
+                    DateVisit = PickDate.Text;
+                    TimeVisit = PickTime.Text;
 
-                address1 = AddressLineBox.Text;
-                address2 = CityProvinceBox.Text;
-                StoreBranch = BranchVisitBox.Text;
+                    ContactNo = NumberBox.Text;
+                    emailadd = EmailBox.Text;
 
-                //FILE Name
-                string filedate;
-                filedate = DateTime.Now.ToLongDateString();
+                    address1 = AddressLineBox.Text;
+                    address2 = CityProvinceBox.Text;
+                    StoreBranch = BranchVisitBox.Text;
 
-                //FILE WRITE
-                StreamWriter DataAdd;
-                DataAdd = File.AppendText(filedate + ".txt");
-                DataAdd.WriteLine("===== CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY! =====");
-                DataAdd.WriteLine("\nCustomer Name:\n" + FirstName);
-                DataAdd.WriteLine(LastName);
-                DataAdd.WriteLine("\nAge & Sex:\n" + Age + " " + Gender);
-                DataAdd.WriteLine("\nFOR SYMPTOMS\n" + conditon);
-                DataAdd.WriteLine("Date:\n" + DateVisit);
-                DataAdd.WriteLine("Time:\n" + TimeVisit);
-                DataAdd.WriteLine("\nContact Details:\n" + ContactNo);
-                DataAdd.WriteLine(emailadd);
-                DataAdd.WriteLine("\nAddress:\n" + address1);
-                DataAdd.WriteLine(address2);
-                DataAdd.WriteLine("\nBRANCH:\n" + StoreBranch);
-                DataAdd.WriteLine("");
-                DataAdd.Close();
+                    //FILE Name
+                    string filedate;
+                    filedate = DateTime.Now.ToLongDateString();
 
-                MessageBox.Show("Please follow the health protocol implemented by the store." +
-               "\nThank you for your cooperation and have a good day!","Form Submitted", MessageBoxButtons.OK , MessageBoxIcon.Information);
+                    //FILE WRITE
+                    StreamWriter DataAdd;
+                    DataAdd = File.AppendText(filedate + ".txt");
+                    DataAdd.WriteLine("===== CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY! =====");
+                    DataAdd.WriteLine("\nCustomer Name:\n" + FirstName);
+                    DataAdd.WriteLine(LastName);
+                    DataAdd.WriteLine("\nAge & Sex:\n" + Age + " " + Gender);
+                    DataAdd.WriteLine("\nFOR SYMPTOMS\n" + conditon);
+                    DataAdd.WriteLine("Date:\n" + DateVisit);
+                    DataAdd.WriteLine("Time:\n" + TimeVisit);
+                    DataAdd.WriteLine("\nContact Details:\n" + ContactNo);
+                    DataAdd.WriteLine(emailadd);
+                    DataAdd.WriteLine("\nAddress:\n" + address1);
+                    DataAdd.WriteLine(address2);
+                    DataAdd.WriteLine("\nBRANCH:\n" + StoreBranch);
+                    DataAdd.WriteLine("");
+                    DataAdd.Close();
 
-                //VALUE RESET
-                FirstNameBox.Text = "";
-                LastNameBox.Text = "";
-                AgeBox.Text = "";
-                GenderBox.Text = "";
-                this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
-                this.PickTime.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
-                SymptomList.Items.Clear();
+                    MessageBox.Show("Please follow the health protocol implemented by the store." +
+                   "\nThank you for your cooperation and have a good day!", "Form Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //THE LIST IS REDONE
-                this.SymptomList.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                this.SymptomList.FormattingEnabled = true;
-                this.SymptomList.Items.AddRange(new object[] {
+                    //VALUE RESET
+                    FirstNameBox.Text = "";
+                    LastNameBox.Text = "";
+                    AgeBox.Text = "";
+                    GenderBox.Text = "";
+                    this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
+                    this.PickTime.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
+                    SymptomList.Items.Clear();
+
+                    //THE LIST IS REDONE
+                    this.SymptomList.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    this.SymptomList.FormattingEnabled = true;
+                    this.SymptomList.Items.AddRange(new object[] {
             "None, I\'m good",
             "Fever",
             "Dry Cough",
@@ -173,29 +190,29 @@ namespace Contact_Tracing_App
             "Difficulty in Breathing",
             "Chest Pain",
             "Loss of Speech"});
-                this.SymptomList.Location = new System.Drawing.Point(418, 209);
-                this.SymptomList.Name = "SymptomList";
-                this.SymptomList.Size = new System.Drawing.Size(285, 67);
-                this.SymptomList.TabIndex = 24;
-                this.SymptomList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.SymptomList_ItemCheck);
+                    this.SymptomList.Location = new System.Drawing.Point(418, 209);
+                    this.SymptomList.Name = "SymptomList";
+                    this.SymptomList.Size = new System.Drawing.Size(285, 67);
+                    this.SymptomList.TabIndex = 24;
+                    this.SymptomList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.SymptomList_ItemCheck);
 
-                NumberBox.Text = "";
-                EmailBox.Text = "";
-                AddressLineBox.Text = "";
-                CityProvinceBox.Text = "";
-                BranchVisitBox.Text = "";
+                    NumberBox.Text = "";
+                    EmailBox.Text = "";
+                    AddressLineBox.Text = "";
+                    CityProvinceBox.Text = "";
+                    BranchVisitBox.Text = "";
 
-                InformationCount = 1;
-            }
-            else
-            {
-                MessageBox.Show("You supplied either an insufficient amount of information or incorrect information.\nPlease double check then try again." +
-                    "\nApproach our staff for any concerns.","INSUFFICIENT INFORMATION",MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-            }
+                    InformationCount = 1;
+                }
+                else
+                {
+                    MessageBox.Show("You supplied either an insufficient amount of information or incorrect information.\nPlease double check then try again." +
+                        "\nApproach our staff for any concerns.", "INSUFFICIENT INFORMATION", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
         }
 
-        private void HelpBTN_Click(object sender, EventArgs e)
+        private void ShowHelp()
         {
             MessageBox.Show(
                 "FOR QUESTIONS AND CONCERNS, PLEASE APPROACH A YourCompany STAFF OR REACH US THROUGH THE FOLLOWING\n\n1800 5485 SAFE\nYourCompany@CustomerCareSafe.com" +
@@ -209,10 +226,9 @@ namespace Contact_Tracing_App
                 "Privacy Policy");
         }
 
-        private void ReaderButton_Click(object sender, EventArgs e)
+        private void ReaderFormUp()
         {
-
-            if(MessageBox.Show("YOU ARE ABOUT TO ACCESS A CONFIDENTIAL FEATURE" +
+            if (MessageBox.Show("YOU ARE ABOUT TO ACCESS A CONFIDENTIAL FEATURE" +
                 "\nPLEASE CONFIRM THAT YOU'RE AN AUTHORIZED PERSONNEL" +
                 "\nUNAUTHORIZED ACTIONS ARE PUNISHABLE BY LAW", "WARNING", MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Warning) == DialogResult.OK)
@@ -222,6 +238,7 @@ namespace Contact_Tracing_App
 
                 this.Visible = false;
             }
+
         }
     }
 }
