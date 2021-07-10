@@ -87,6 +87,8 @@ namespace Contact_Tracing_App
             {
                 FirstName = FirstNameBox.Text;
                 LastName = LastNameBox.Text;
+                Age = AgeBox.Text;
+                Gender = GenderBox.Text;
 
                 string conditon = "";
 
@@ -119,6 +121,7 @@ namespace Contact_Tracing_App
                 DataAdd.WriteLine("==========CONFIDENTIAL DATA! FOR AUTHORIZED YourCompany PERSONNEL USE ONLY!==========");
                 DataAdd.WriteLine("\nCustomer Name:\n" + FirstName);
                 DataAdd.WriteLine(LastName);
+                DataAdd.WriteLine("\nAge & Sex:\n" + Age + " " + Gender);
                 DataAdd.WriteLine("\nFOR SYMPTOMS\n" + conditon);
                 DataAdd.WriteLine("Date:\n" + DateVisit);
                 DataAdd.WriteLine("Time:\n" + TimeVisit);
@@ -136,6 +139,8 @@ namespace Contact_Tracing_App
                 //VALUE RESET
                 FirstNameBox.Text = "";
                 LastNameBox.Text = "";
+                AgeBox.Text = "";
+                GenderBox.Text = "";
                 this.PickDate.Value = new System.DateTime(2021, 6, 1, 22, 56, 58, 0);
                 this.PickTime.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
                 SymptomList.Items.Clear();
@@ -178,8 +183,6 @@ namespace Contact_Tracing_App
                     "\nApproach our staff for any concerns.","INSUFFICIENT INFORMATION",MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-
-           
         }
 
         private void HelpBTN_Click(object sender, EventArgs e)
@@ -209,8 +212,6 @@ namespace Contact_Tracing_App
 
                 this.Visible = false;
             }
-           
-            
         }
     }
 }
